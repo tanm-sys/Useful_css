@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="flex justify-center items-center h-screen bg-gradient-to-r from-background to-accent">
+  <div class="relative">
+    <div class="w-24 h-24 border-4 border-t-transparent border-primary rounded-full animate-ping border-l-accent border-r-secondary border-b-destructive"></div>
+    <div class="absolute inset-0 flex justify-center items-center">
+      <div class="w-12 h-12 bg-primary rounded-full animate-bounce shadow-lg"></div>
+    </div>
+  </div>
+</div>
+
+```To make the loading spinner more colorful, creative, and modern, we can enhance the design by adding more colors, gradients, and animations. We'll also use the provided color variables to ensure it adapts well to both light and dark modes.
+Here's the updated HTML:
+```html
+<div class="flex justify-center items-center h-screen bg-gradient-to-r from-primary to-secondary">
+  <div class="relative">
+    <div class="w-24 h-24 border-4 border-t-transparent border-primary rounded-full animate-spin"></div>
+    <div class="absolute inset-0 flex justify-center items-center">
+      <div class="w-12 h-12 bg-primary rounded-full animate-pulse"></div>
+    </div>
+  </div>
+</div>
+<div class="flex justify-center items-center h-screen bg-gradient-to-r from-primary to-secondary">
+  <div class="relative">
+    
+    <div class="w-32 h-32 border-8 border-t-transparent border-primary rounded-full animate-spin"></div>
+    <div class="absolute inset-0 flex justify-center items-center">
+      
+      <div class="w-24 h-24 border-4 border-t-transparent border-accent rounded-full animate-spin-slow"></div>
+      <div class="absolute inset-0 flex justify-center items-center">
+        
+        <div class="w-16 h-16 border-4 border-t-transparent border-secondary rounded-full animate-spin-reverse"></div>
+        <div class="absolute inset-0 flex justify-center items-center">
+          
+          <div class="w-8 h-8 bg-primary rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  @keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  @keyframes spin-reverse {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+  }
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+  .animate-spin-reverse {
+    animation: spin-reverse 2s linear infinite;
+  }
+</style>
+
+  </body>
+</html>
